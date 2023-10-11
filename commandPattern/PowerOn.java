@@ -10,6 +10,6 @@ public class PowerOn implements Command{
     }
     @Override
     public String execute() {
-        return tv.switchOn();
+        return tv.turnOn();
     }
 }

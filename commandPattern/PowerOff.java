@@ -9,7 +9,7 @@ public class PowerOff implements Command{
     }
     @Override
     public String execute() {
-        return tv.switchOff();
+        return tv.turnOff();
 
     }
 }

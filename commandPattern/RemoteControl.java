@@ -1,18 +1,20 @@
 package commandPattern;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RemoteControl {
+    private Map<Integer, Command> commands;
 
-    private Command command;
-
-    public Command getCommand() {
-        return command;
+    public RemoteControl() {
+        commands = new HashMap<>();
     }
 
-    public void setCommand(Command command) {
-        this.command = command;
+    public void addCommand(int commandNumber, Command command) {
+        commands.put(commandNumber, command);
     }
 
-    public void clickButton(){
-        command.execute();
+    public Command getCommand(int commandNumber) {
+        return commands.get(commandNumber);
     }
 }
